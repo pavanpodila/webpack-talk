@@ -1,14 +1,16 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
 
     entry: {
-        main: __dirname + '/src/main.jsx'
+        main: './src/main.jsx',
+        vendor: './src/vendor.js'
     },
 
     output: {
         path: __dirname + '/build',
-        filename: '[name].bundle.js'
+        filename: '[name].[chunkhash].js'
     },
 
 
@@ -26,6 +28,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Webpack Talk',
             template: 'src/index.html'
+        }),
+
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['vendor', 'manifest']
         })
     ]
 };
