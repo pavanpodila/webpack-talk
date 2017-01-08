@@ -13,3 +13,5 @@ Example code for the talk on Webpack
 - Still has issues since the `chunkhash` changes on every build
 - Use the `manifest` chunk with `CommonsChunkPlugin`
 - Add CSS support
+- live reloading
+

@@ -30,7 +30,8 @@ module.exports = {
                     'css-loader?importLoaders=1',
                     'postcss-loader'
                 ]
-            }
+            },
+
         ]
     },
 
@@ -43,5 +44,12 @@ module.exports = {
         new webpack.optimize.CommonsChunkPlugin({
             name: ['vendor', 'manifest']
         }),
-    ]
+
+        new webpack.ProvidePlugin({
+            jQuery: 'jquery',
+            Tether: 'tether'
+        })
+    ],
+
+    devtool: 'inline-source-map'
 };
