@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
@@ -20,6 +21,15 @@ module.exports = {
                 test: /\.jsx?$/,
                 use: ['babel-loader'],
                 exclude: /node_modules/
+            },
+
+            {
+                test: /\.css?/,
+                use: [
+                    'style-loader',
+                    'css-loader?importLoaders=1',
+                    'postcss-loader'
+                ]
             }
         ]
     },
@@ -32,6 +42,6 @@ module.exports = {
 
         new webpack.optimize.CommonsChunkPlugin({
             name: ['vendor', 'manifest']
-        })
+        }),
     ]
 };

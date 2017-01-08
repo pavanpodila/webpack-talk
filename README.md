@@ -12,4 +12,4 @@ Example code for the talk on Webpack
 - Code splitting with `vendor` entry
 - Still has issues since the `chunkhash` changes on every build
 - Use the `manifest` chunk with `CommonsChunkPlugin`
-
+- Add CSS support
