@@ -1,7 +1,12 @@
 :root {
-    --background-color: lightgoldenrodyellow;
+    --background-color: azure;
 }
 
 body {
     background: var(--background-color);
+}
+
+h1 {
+    color: #3ad9e7;
+    text-shadow: 1px 1px 3px #999;
 }
