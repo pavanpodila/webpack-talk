@@ -12,7 +12,10 @@ module.exports = merge(webpackCommon, {
             'webpack/hot/only-dev-server',
             './src/index.jsx'
         ],
-        vendor: './src/vendor.js'
+    },
+
+    output: {
+        publicPath: '/'
     },
 
     plugins: [

@@ -6,7 +6,16 @@ import {Route, BrowserRouter as Router, Link} from 'react-router-dom';
 import {Title} from 'components/title';
 
 export class App extends React.Component {
+    state = {
+        lazyLoaded: false
+    };
+
+    LazyComponent = null;
+
     render() {
+        const {lazyLoaded} = this.state;
+        const LazyComponent = this.LazyComponent;
+
         return (
             <Router>
                 <div>
@@ -19,23 +28,41 @@ export class App extends React.Component {
                         <li>
                             <Link to={'/logo'}>Go to Logo</Link>
                         </li>
+                        <li>
+                            {
+                                lazyLoaded
+                                    ? <strong>Loaded!</strong>
+                                    : <button onClick={this.loadModule}>Load Lazy Component</button>
+                            }
+
+                        </li>
                     </ul>
+
+                    {
+                        lazyLoaded
+                            ? <LazyComponent />
+                            : null
+
+                    }
                     <Route path={'/logo'} component={Logo}/>
                 </div>
             </Router>
         );
     }
 
-    loadModule() {
-        require.ensure(['./lazy-module.js'])
-    }
+    loadModule = () => {
+        require.ensure([], (require) => {
+            this.LazyComponent = require('./components/lazy-component').LazyComponent;
+            this.setState({lazyLoaded: true});
+        });
+    };
 }
 
 function Logo() {
     return (
         <div>
             <img src={reactLogo} width="512" alt="React 3D Logo"/>
-            <img src={devNexusLogo} />
+            <img src={devNexusLogo}/>
         </div>
     );
 }

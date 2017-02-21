@@ -30,7 +30,7 @@ module.exports = {
                     {
                         loader: 'babel-loader',
                         options: {
-                            presets: ['latest', 'react'],
+                            presets: ['latest', 'stage-1', 'react'],
                             plugins: ['react-hot-loader/babel']
                         }
                     }
