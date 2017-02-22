@@ -4,7 +4,8 @@
   "description": "Example code for the talk on Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "build": "rm -rf build && webpack --config webpack-prod.config.js",
+    "start": "webpack-dev-server --config webpack-dev.config.js"
   },
   "repository": {
     "type": "git",
