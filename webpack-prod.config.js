@@ -25,10 +25,18 @@ module.exports = webpackMerge(webpackCommon, {
         ]
     },
 
+    stats: {
+        chunks: true,
+        modules: false
+    },
+
     plugins: [
         new webpack.DefinePlugin({
             DEV: false,
             'process.env.NODE_ENV': JSON.stringify('production')
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
         }),
         new webpack.optimize.UglifyJsPlugin(),
         new webpack.optimize.OccurrenceOrderPlugin(),

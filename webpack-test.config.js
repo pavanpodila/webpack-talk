@@ -4,18 +4,9 @@ const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 const webpackCommon = require('./webpack-common.config');
 
-const port = 8080;
-
 module.exports = webpackMerge(webpackCommon, {
 
-    entry: {
-        main: [
-            'react-hot-loader/patch',
-            `webpack-dev-server/client?http://localhost:${port}`,
-            'webpack/hot/only-dev-server',
-            './src/index.jsx'
-        ],
-    },
+    entry: {},
 
     module: {
         rules: [
@@ -25,7 +16,14 @@ module.exports = webpackMerge(webpackCommon, {
                     loader: 'babel-loader',
                     options: {
                         presets: ['latest', 'stage-1', 'react'],
-                        plugins: ['react-hot-loader/babel']
+                        plugins: [
+                            [
+                                "__coverage__",
+                                {
+                                    "ignore": "*.test.*"
+                                }
+                            ]
+                        ]
                     }
                 },
                 exclude: /node_modules/,
@@ -34,22 +32,10 @@ module.exports = webpackMerge(webpackCommon, {
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
-        }),
         new webpack.DefinePlugin({
             DEV: true,
         }),
     ],
 
     devtool: 'inline-source-map',
-    devServer: {
-        port,
-        stats: 'minimal',
-        hot: true,
-        historyApiFallback: true,
-        publicPath: '/'
-    }
 });
