@@ -4,17 +4,17 @@ Example code for the talk on Webpack
 ## Topics Covered
 
 - [ ] A simple project with `webpack.config.js`
-- [ ] Adding `index.html` via `HtmlWebpackPlugin`
 - [ ] JS/JSX transpilation via `babel`
+- [ ] Adding `index.html` via `HtmlWebpackPlugin`
 - [ ] Add CSS support
-- [ ] Loading images with `file-loader`
 - [ ] Stamping builds with a `hash` in filename
-- [ ] React HMR with `react-hot-loader`
+- [ ] Loading images with `file-loader`
 - [ ] Aliasing module names for shorter imports
-- [ ] Code splitting with `vendor` entry + `CommonsChunkPlugin`
-- [ ] Using `DefinePlugin` to introduce env vars
 - [ ] Using `ProvidePlugin` for supplying modules for free vars
+- [ ] Using `DefinePlugin` to introduce env vars
+- [ ] Code splitting with `vendor` entry + `CommonsChunkPlugin`
 - [ ] Lazy loading components
-- [ ] Dev and Prod configurations using `webpack-merge`
 - [ ] `historyApiFallback` with `react-router-dom`
+- [ ] React HMR with `react-hot-loader`
+- [ ] Dev and Prod configurations using `webpack-merge`
 - [ ] Adding Unit testing with Karma/Mocha/Chai/Sinon
