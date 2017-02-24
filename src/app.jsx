@@ -1,7 +1,7 @@
 import reactLogo from './assets/react.jpg'
 import devNexusLogo from './assets/devnexus-logo.png';
 import {Title} from './components/title';
-import {Feature} from './feature/feature-main';
+import {Feature} from './feature/feature';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 
 export function App() {
@@ -12,7 +12,7 @@ export function App() {
     return (
         <Router>
             <div>
-                <Title text="Hello Webpack Changed"/>
+                <Title text="Hello Webpack"/>
 
                 <ul className="list-unstyled">
                     <li><Link to="/">Go Home</Link></li>
