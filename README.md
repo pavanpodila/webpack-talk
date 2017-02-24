@@ -1,20 +1,22 @@
 # webpack-talk
 Example code for the talk on Webpack
 
+[Slides](webpack-slides.pdf)
+
 ## Topics Covered
 
-- [ ] A simple project with `webpack.config.js`
-- [ ] Adding `index.html` via `HtmlWebpackPlugin`
-- [ ] JS/JSX transpilation via `babel`
-- [ ] Add CSS support
-- [ ] Loading images with `file-loader`
-- [ ] Stamping builds with a `hash` in filename
-- [ ] React HMR with `react-hot-loader`
-- [ ] Aliasing module names for shorter imports
-- [ ] Code splitting with `vendor` entry + `CommonsChunkPlugin`
-- [ ] Using `DefinePlugin` to introduce env vars
-- [ ] Using `ProvidePlugin` for supplying modules for free vars
-- [ ] Lazy loading components
-- [ ] Dev and Prod configurations using `webpack-merge`
-- [ ] `historyApiFallback` with `react-router-dom`
-- [ ] Adding Unit testing with Karma/Mocha/Chai/Sinon
+- [x] A simple project with `webpack.config.js`
+- [x] Stamping builds with a `hash` in filename
+- [x] JS/JSX transpilation via `babel`
+- [x] Adding `index.html` via `HtmlWebpackPlugin`
+- [x] Add CSS support
+- [x] Loading images with `file-loader`
+- [x] Aliasing module names for shorter imports
+- [x] Code splitting with `vendor` entry + `CommonsChunkPlugin`
+- [x] Using `DefinePlugin` to introduce env vars
+- [x] Using `ProvidePlugin` for supplying modules for free vars
+- [x] Lazy loading components
+- [x] `historyApiFallback` with `react-router-dom`
+- [x] React HMR with `react-hot-loader`
+- [x] Dev and Prod configurations using `webpack-merge`
+- [x] Adding Unit testing with Karma/Mocha/Chai/Sinon
