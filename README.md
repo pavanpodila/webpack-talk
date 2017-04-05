@@ -1,8 +1,6 @@
 # webpack-talk
 Example code for the talk on Webpack.
 
-This talk was given at [DevNexus 2017 (Feb 23rd)](https://www.devnexus.com/s/devnexus2017/presentations/17402)
-
 [Slides](webpack-slides.pdf)
 
 ## Topics Covered
