@@ -20,7 +20,7 @@ module.exports = webpackMerge(webpackCommon, {
                             [
                                 "__coverage__",
                                 {
-                                    "ignore": "*.test.*"
+                                    "ignore": "test.index.js"
                                 }
                             ]
                         ]
