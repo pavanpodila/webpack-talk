@@ -1,5 +1,4 @@
 import reactLogo from './assets/react.jpg'
-import devNexusLogo from './assets/devnexus-logo.png';
 import {Title} from './components/title';
 import {Feature} from './feature/feature';
 import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
@@ -20,7 +19,6 @@ export function App() {
                 </ul>
 
                 <img src={reactLogo} alt="My React Logo" width={512}/>
-                <img src={devNexusLogo}/>
 
                 <Route path="/feature" component={Feature} />
             </div>

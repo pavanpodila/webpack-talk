@@ -15,7 +15,7 @@ module.exports = webpackMerge(webpackCommon, {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['latest', 'stage-1', 'react'],
+                        presets: ['env', 'stage-1', 'react'],
                         plugins: [
                             [
                                 "__coverage__",
